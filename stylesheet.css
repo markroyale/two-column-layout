@@ -1,0 +1,42 @@
+::root {
+  box-sizing: border-box; /*applies border box sizing to 
+  the root element*/
+}
+*,
+::before, /*tells other elements and pseudo-elements to inherit their box sizing*/
+::after {
+  box-sizing: inherit;
+}
+.third-party-component {
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+}
+header {
+  color: #fff;
+  background-color: #0072b0;
+  border-radius: 0.5em;
+}
+main {
+  display: block;
+  /*fixes ie bug*/
+}
+.main {
+  box-sizing: border-box;
+  float: left;
+  width: 70%;
+  background-color: #fff;
+  border-radius: 0.5em;
+  /*floats the main column left and sets the 
+  width to 70%*/
+}
+.sidebar {
+  box-sizing: border-box;
+  float: left; /*floats the sidebar left and set the width at 30% */
+  width: 30%;
+  padding: 1.5em;
+  background-color: #fff;
+  border-radius: 0.5em;
+  /*adds padding to the sidebar*/
+}
