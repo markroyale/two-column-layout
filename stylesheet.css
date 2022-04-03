@@ -22,9 +22,17 @@ main {
   display: block;
   /*fixes ie bug*/
 }
+.wrapper {
+  margin-left: -1.5em;
+  margin-right: -1.5em; /*adds new wrapper with negative margins*/
+}
+.container {
+  display: table; /*makes the container layout resemble a table*/
+  width: 100%; /*makes the table fill it's container width*/
+  border-spacing: 1.5em 0; /*applies horizontal border spacing between table cells*/
+}
 .main {
-  box-sizing: border-box;
-  float: left;
+  display: table-cell; /*makes the column layout mimic table cells*/
   width: 70%;
   background-color: #fff;
   border-radius: 0.5em;
@@ -32,9 +40,9 @@ main {
   width to 70%*/
 }
 .sidebar {
-  box-sizing: border-box;
-  float: left; /*floats the sidebar left and set the width at 30% */
+  display: table-cell;
   width: 30%;
+  margin-left: 1.5em; /*margin no longer works*/
   padding: 1.5em;
   background-color: #fff;
   border-radius: 0.5em;
